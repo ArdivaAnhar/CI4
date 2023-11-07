@@ -82,15 +82,12 @@ class AuthController extends BaseController
 
                     return redirect()->to(base_url('beranda'));
                 } else {
-
                     return redirect()->to(base_url('siswa'))->with('login_failed', 'Username atau password yang anda masukkan salah !');
                 }
             } else {
-
                 return redirect()->to(base_url('siswa'))->with('login_failed', 'Username tidak ditemukan !');
             }
         } else {
-            
             return redirect()->to(base_url('siswa'))->withInput();
         }
     }
